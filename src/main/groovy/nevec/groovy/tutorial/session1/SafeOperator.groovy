@@ -4,7 +4,7 @@ def foo(str) {
     str.reverse()
 }
 
-println foo('fdsf')
+println foo('ggggggggggggggg')
 println foo(null)
 
 //ExceptionHandling.groovy
