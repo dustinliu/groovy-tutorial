@@ -6,4 +6,4 @@ try {
     println('interrupted')
 }
 
-// car
+// closable
