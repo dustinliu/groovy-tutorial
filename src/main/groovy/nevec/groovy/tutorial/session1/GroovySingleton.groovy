@@ -14,4 +14,3 @@ SingletonClass.instance.hello()
 
 
 //Gotchas
-
