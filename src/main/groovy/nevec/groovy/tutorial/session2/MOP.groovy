@@ -1,4 +1,3 @@
-
 //package groovy.lang;
 //public interface GroovyObject {
 //    Object invokeMethod( String name, Object args);
@@ -8,6 +7,13 @@
 //    void setMetaClass( MetaClass metaClass);
 //}
 
+/*
+POJO
+POGO
+Groovy interceptors
+*/
+
+GroovyObject a = "a"
 
 /***
  * Excerpted from "Programming Groovy, 2nd Edition",
@@ -86,3 +92,4 @@ class ClassWithInvokeOnly {
     def invokeMethod(String name, args) { 'invoke called' }
 }
 
+//Interceptor
