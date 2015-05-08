@@ -11,6 +11,7 @@ Given(~/an id (.+)$/) { String i ->
 }
 
 When(~/call the get method with this id/) { ->
+    println aaa
     try {
         r = tutorialClient.get(path: "/m.json", query:[id: id])
     } catch (ex) {
@@ -23,13 +24,13 @@ Then(~/the http status code should be (\d+)/) { int status ->
 }
 
 And(~/the mid in response should be (.+)$/) { String mid ->
-    assert r.data.response_data[0].detail_response_data.merchandise_data.mid == mid
-//    def a = [a: 'a', b: 'b', c: 'c', d:[1 ,2 ,4]]
-//    def b = [a: 'a', d: [1,2,4],c: 'c', b: 'b']
-//    assert a == b
+//    assert r.data.response_data[0].detail_response_data.merchandise_data.mid == mid
+    def a = [a: 'a', b: 'b', c: 'c', d:[1 ,2 ,4]]
+    def b = [a: 'a', d: [1,2,4],c: 'c', b: 'b']
+    assert a == b
 }
 
 When(~/post a new merchandise/) { ->
-    r = tutorialClient.post(path: '/post.php', requestContentType: ContentType.JSON , body : [a:'a', b:[t:'t'],
-                                                                                              c:[1, 2,3]])
+    r = tutorialClient.post(path: '/post.php', requestContentType: ContentType.JSON
+            , body : [a:'a', b:[t:'t'], c:[1, 2,3]])
 }
